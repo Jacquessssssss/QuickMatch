@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>QuickMatch - Free Play</title>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- link fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href = "styles.css">
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    
+    <script defer src= "script.js"></script>
+</head>
+<body class="body">
+
+    <!-- header loaded from js -->
+    <nav>
+        <div id="header"></div>
+    </nav>
+
+    <!-- attempts and restart buttons -->
+    <div class="controls">
+        <a><div class="colored-button" style = "margin-top: 40px;">Attempts: <span class="score">0</span></div></a>
+        <button class="colored-button" style = "margin-top: 40px;" onclick="restart()">Restart</button></div>
+    </div>
+    <div class = "game-container">
+        <div class="grid-container"></div>
+    </div>
+
+
+     <!-- loaded from bootstrap -->
+        <!-- Win Modal -->
+        <div class="modal fade" id="winModal" tabindex="-1" aria-labelledby="winModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="winModalLabel">Congratulations!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="winMessage">You won with <span id="attemptsCount">0</span> attempts!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary model-button" onclick="restart()">Play Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+
+    <div id="footer"></div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

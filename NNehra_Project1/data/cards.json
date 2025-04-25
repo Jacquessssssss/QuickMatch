@@ -1,0 +1,34 @@
+[
+    {
+        "image": "images/anchor.png", 
+        "name": "anchor"
+    },
+    {
+        "image": "images/yin-yang.png", 
+        "name": "yin-yang"
+    },
+    {
+        "image": "images/music-alt.png", 
+        "name": "music-alt"
+    },
+    {
+        "image": "images/moon-stars.png", 
+        "name": "moon-stars"
+    },
+    {
+        "image": "images/club.png", 
+        "name": "club"
+    },
+    {
+        "image": "images/heart.png", 
+        "name": "heart"
+    },
+    {
+        "image": "images/diamond.png", 
+        "name": "diamond"
+    },
+    {
+        "image": "images/spade.png", 
+        "name": "spade"
+    }
+]
