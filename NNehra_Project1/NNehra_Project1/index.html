@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>QuickMatch - Home</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Triodion&family=Young+Serif&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Custom JavaScript -->
+    <script defer src="script.js"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        /* Thank You Popup Styles */
+        #thankyou-popup {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #6f42c1;
+            color: white;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            display: none;
+            font-family: 'Lora', serif;
+            font-size: 16px;
+            z-index: 1000;
+            transition: all 0.4s ease;
+        }
+
+        #thankyou-popup p {
+            margin: 0;
+        }
+
+        #close-popup {
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body class="body">
+    <!-- Header (Loaded from JS) -->
+    <nav>
+        <div id="header"></div>
+    </nav>
+    
+    <main>
+        <!-- Learn more Section -->
+        <section class="description-home">
+            <div class="description-home-content">
+                <a href="about.html"></a>
+                <img src="images/purple-back.jpg" style="max-height: 420px;" alt="ace of spades card" class="description-home-image">
+                <div class="text-container">
+                    <h2 class="headers">Ready to challenge your mind?</h2>
+                    <p>Put your critical thinking and problem-solving skills to the test with our two exciting gameplay modes. One mode even includes a timer to push your time management and quick decision-making abilities to the limit. Ready to take on the challenge? Tap below to learn more and start playing today!</p>
+                    <a href="about.html"><button class="colored-button"> Learn More </button></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- YouTube Section -->
+        <section class="description-home">
+            <div class="description-home-content">
+                <div class="video-container">
+                    <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/KkaXNvzE4pk"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="text-container">
+                    <h2 class="headers">Unlock Your Mind's Power!</h2>
+                    <p>
+                        Aristotle said it best: “Memory is the scribe of the soul.” It's your brain's superpower—recording every experience, helping you learn, and shaping who you are. Ready to boost those memory skills? Hit play and discover how amazing your mind can be!
+                    </p>
+                    <a href="timedGame.html"><button class="colored-button"> Start Playing Now</button></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Modes Section -->
+        <section class="description-home features-section">
+            <div id="play-section"></div>
+            <div class="description-home-content features-container">
+                <!-- Game 1 -->
+                <div class="feature-card">
+                    <a href="freeGame.html"><img src="images/cards-black.webp" alt="infinity symbol" class="feature-image"></a>
+                    <div class="text-container">
+                        <h3 class="headers feature-header">Free play</h3>
+                        <p class="feature-description">Play freely with no time limits! Practice your skills and enhance your memory with this play mode.</p>
+                        <a href="freeGame.html" class="colored-button">Play</a> 
+                    </div>
+                </div>
+                <!-- Game 2 -->
+                <div class="feature-card">
+                    <a href="timedGame.html"><img src="images/clock-desgin.jpg" alt="clock in space" class="feature-image"></a>
+                    <div class="text-container">
+                        <h3 class="headers feature-header">Timed Challenge</h3>
+                        <p class="feature-description">Try to match all cards in 90 seconds! This mode is perfect to challenge your critical thinking skills.</p>
+                        <a href="timedGame.html" class="colored-button">Play</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game 3 -->
+        <section class="description-home">
+            <div class="description-home-content" style="margin-top: -50px;">
+                <a href="guess.html"><img src="images/magical-hands-corine-ross.jpg" alt="magic hands" class="description-home-image" style="width:450px; height:275px; margin: 10px"></a>
+                <div class="text-container">
+                    <h2 class="headers">Mystery challenge</h2>
+                    <p>You're on your own for this one, figure it out and try to win!</p>
+                    <a href="guess.html"><button class="colored-button"> Challenge </button></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thank You Popup -->
+        <div id="thankyou-popup">
+            <p> You have to really focus on details!</p>
+            <span id="close-popup">&times;</span>
+        </div>
+    </main>
+
+    <!-- Footer (Loaded from JS) -->
+    <div id="footer"></div>
+
+    <!-- Popup Script -->
+    <script>
+        $(document).ready(function () {
+            const popup = $('#thankyou-popup');
+
+            // Target the last .description-home-content (Mystery Game section)
+            $('.description-home-content').last().on('mouseenter', function () {
+                popup.stop(true, true).slideDown(200); // slide in
+            });
+
+            $('.description-home-content').last().on('mouseleave', function () {
+                popup.stop(true, true).slideUp(400); // slide out
+            });
+
+            $('#close-popup').on('click', function () {
+                popup.slideUp(300);
+            });
+        });
+    </script>
+    
+</body>
+</html>
